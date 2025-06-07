@@ -999,7 +999,7 @@
                     "name": "Engine",
                     "type": "Value",
                     "id": "a4e09456-c32c-4069-89b3-36e44129a1b4",
-                    "expectedControlType": "Integer",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -1015,39 +1015,6 @@
                 }
             ],
             "bindings": [
-                {
-                    "name": "WS",
-                    "id": "95d5271b-e004-4a98-b116-a3ceb156b9cf",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Engine",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "8b18f16d-d336-4882-b1a9-aa4fb7bc412c",
-                    "path": "<Keyboard>/S",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Engine",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "aa88936f-e5b3-405a-a669-5aa74bcd3011",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Engine",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
                 {
                     "name": "AD",
                     "id": "123387cb-1901-41ff-b3cd-a6b2b825bd79",
@@ -1080,6 +1047,17 @@
                     "action": "Rotation",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "10a162f5-2b1b-461a-b4e0-347eb499ce26",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Engine",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
