@@ -8,22 +8,22 @@ public class KeyboardInput : MonoBehaviour
 {
     public Rocket rocket;
 
-    int isEngineHold = 0;
     int isRotationHold = 0;
 
-    public float engineDelta = 5f;
-    public float rotationDelta = 30f;
+    public float rotationDelta = 180f;
 
     public void OnEngine(InputAction.CallbackContext context)
     {
 
         if (context.started)
         {
-            isEngineHold = (int)context.ReadValue<float>();
+            Debug.Log("Engine started");
+            rocket.isEngineOn = true;
         }
         else if (context.canceled)
         {
-            isEngineHold = (int)context.ReadValue<float>();
+            Debug.Log("Engine stopped");
+            rocket.isEngineOn = false;
         }
     }
 
@@ -33,27 +33,17 @@ public class KeyboardInput : MonoBehaviour
         if (context.started)
         {
             isRotationHold = (int)context.ReadValue<float>();
+            rocket.isRotating = true;
         }
         else if (context.canceled)
         {
             isRotationHold = (int)context.ReadValue<float>();
+            rocket.isRotating = false;
         }
     }
 
     private void Update()
     {
-        if (isEngineHold != 0) {
-            rocket.enginePower += isEngineHold * engineDelta * Time.deltaTime;
-            if (rocket.enginePower > 10f) // Limit the maximum power
-            {
-                rocket.enginePower = 10f;
-            }
-            else if (rocket.enginePower < 0f) // Prevent negative power
-            {
-                rocket.enginePower = 0f;
-            }
-        }
-
         if (isRotationHold != 0)
         {
             rocket.engineDirection += isRotationHold * rotationDelta * Time.deltaTime;
